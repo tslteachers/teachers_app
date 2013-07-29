@@ -6,7 +6,7 @@
 
   <div>
     <%= label_tag :subject_id %><br />
-    <%= number_field_tag :subject_id %>
+    <%= select_tag :subject_id, options_from_collection_for_select(Subject.all, :id, :name) %>
   </div>
 
   <div>
@@ -31,7 +31,7 @@
 
   <div>
     <%= label_tag :college_id %><br />
-    <%= number_field_tag :college_id %>
+    <%= select_tag :college_id, options_from_collection_for_select(College.all, :id, :name) %>
   </div>
 
   <div>

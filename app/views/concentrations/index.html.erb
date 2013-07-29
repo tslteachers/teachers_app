@@ -16,9 +16,9 @@
   <tbody>
   <% @concentrations.each do |concentration| %>
     <tr>
-      <td><%= concentration.teacher_id %></td>
-      <td><%= concentration.subject_id %></td>
-  
+      <td><%= concentration.teacher.full_name %></td>
+      <td><%= concentration.subject.name %></td>
+
       <td><%= link_to 'Show', concentration_url(concentration) %></td>
       <td><%= link_to 'Edit', edit_concentration_url(concentration) %></td>
       <td><%= link_to 'Destroy', concentration_url(concentration), method: 'delete', data: { confirm: "Do you really want to delete this concentration?" } %></td>

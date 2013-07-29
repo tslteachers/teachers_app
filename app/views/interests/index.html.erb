@@ -16,9 +16,9 @@
   <tbody>
   <% @interests.each do |interest| %>
     <tr>
-      <td><%= interest.teacher_id %></td>
-      <td><%= interest.course_id %></td>
-  
+      <td><%= interest.teacher.full_name %></td>
+      <td><%= interest.course.name %></td>
+
       <td><%= link_to 'Show', interest_url(interest) %></td>
       <td><%= link_to 'Edit', edit_interest_url(interest) %></td>
       <td><%= link_to 'Destroy', interest_url(interest), method: 'delete', data: { confirm: "Do you really want to delete this interest?" } %></td>

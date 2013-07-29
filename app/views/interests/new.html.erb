@@ -6,12 +6,12 @@
 
   <div>
     <%= label_tag :teacher_id %><br />
-    <%= number_field_tag :teacher_id %>
+    <%= select_tag :teacher_id, options_from_collection_for_select(Teacher.all, :id, :full_name) %>
   </div>
 
   <div>
     <%= label_tag :course_id %><br />
-    <%= number_field_tag :course_id %>
+    <%= select_tag :course_id, options_from_collection_for_select(Course.all, :id, :name) %>
   </div>
 
 
