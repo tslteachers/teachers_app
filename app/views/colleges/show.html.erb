@@ -30,4 +30,30 @@
   <%= @college.zip %>
 </p>
 
+<p>
+  <b>Courses:</b>
+  <ul>
+    <% @college.courses.each do |course| %>
+      <li><%= course.name %> (<%= course.time %>)
+        <ul>
+          <% course.teachers.each do |teacher| %>
+            <li><%= teacher.full_name %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
 
