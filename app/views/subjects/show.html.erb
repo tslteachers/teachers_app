@@ -5,4 +5,10 @@
   <%= @subject.name %>
 </p>
 
+<h2>Teachers concentrated in this subject:</h2>
 
+<ul>
+  <% @subject.teachers.each do |teacher| %>
+    <ul><%= teacher.full_name %></ul>
+  <% end %>
+</ul>
