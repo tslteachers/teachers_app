@@ -1,0 +1,41 @@
+<h1>Editing College #<%= @college.id %></h1>
+
+
+<%= form_tag(college_url(@college), method: 'patch') do %>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @college.name %>
+  </div>
+
+  <div>
+    <%= label_tag :address1 %><br />
+    <%= text_field_tag :address1, @college.address1 %>
+  </div>
+
+  <div>
+    <%= label_tag :address2 %><br />
+    <%= text_field_tag :address2, @college.address2 %>
+  </div>
+
+  <div>
+    <%= label_tag :city %><br />
+    <%= text_field_tag :city, @college.city %>
+  </div>
+
+  <div>
+    <%= label_tag :state %><br />
+    <%= text_field_tag :state, @college.state %>
+  </div>
+
+  <div>
+    <%= label_tag :zip %><br />
+    <%= text_field_tag :zip, @college.zip %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update College" %>
+  </div>
+
+<% end %>

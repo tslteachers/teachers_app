@@ -1,0 +1,21 @@
+<h1>Editing Concentration #<%= @concentration.id %></h1>
+
+
+<%= form_tag(concentration_url(@concentration), method: 'patch') do %>
+
+  <div>
+    <%= label_tag :teacher_id %><br />
+    <%= number_field_tag :teacher_id, @concentration.teacher_id %>
+  </div>
+
+  <div>
+    <%= label_tag :subject_id %><br />
+    <%= number_field_tag :subject_id, @concentration.subject_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Concentration" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,40 @@
+<h1>Courses</h1>
+
+<p><%= link_to 'Add a New Course', new_course_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th>Compensation</th>
+      <th>Qualifications</th>
+      <th>College</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= course.subject_id %></td>
+      <td><%= course.location %></td>
+      <td><%= course.time %></td>
+      <td><%= course.compensation %></td>
+      <td><%= course.qualifications %></td>
+      <td><%= course.college_id %></td>
+      <td><%= course.description %></td>
+  
+      <td><%= link_to 'Show', course_url(course) %></td>
+      <td><%= link_to 'Edit', edit_course_url(course) %></td>
+      <td><%= link_to 'Destroy', course_url(course), method: 'delete', data: { confirm: "Do you really want to delete this course?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

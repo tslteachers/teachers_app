@@ -1,0 +1,21 @@
+<h1>New Concentration</h1>
+
+
+<%= form_tag(concentrations_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :teacher_id %><br />
+    <%= number_field_tag :teacher_id %>
+  </div>
+
+  <div>
+    <%= label_tag :subject_id %><br />
+    <%= number_field_tag :subject_id %>
+  </div>
+
+
+  <div>
+    <%= submit_tag "Create Concentration" %>
+  </div>
+<% end %>

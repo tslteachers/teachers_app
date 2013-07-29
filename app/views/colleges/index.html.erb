@@ -1,0 +1,38 @@
+<h1>Colleges</h1>
+
+<p><%= link_to 'Add a New College', new_college_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @colleges.each do |college| %>
+    <tr>
+      <td><%= college.name %></td>
+      <td><%= college.address1 %></td>
+      <td><%= college.address2 %></td>
+      <td><%= college.city %></td>
+      <td><%= college.state %></td>
+      <td><%= college.zip %></td>
+  
+      <td><%= link_to 'Show', college_url(college) %></td>
+      <td><%= link_to 'Edit', edit_college_url(college) %></td>
+      <td><%= link_to 'Destroy', college_url(college), method: 'delete', data: { confirm: "Do you really want to delete this college?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

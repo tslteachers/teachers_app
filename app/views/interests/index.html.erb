@@ -1,0 +1,30 @@
+<h1>Interests</h1>
+
+<p><%= link_to 'Add a New Interest', new_interest_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Course</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @interests.each do |interest| %>
+    <tr>
+      <td><%= interest.teacher_id %></td>
+      <td><%= interest.course_id %></td>
+  
+      <td><%= link_to 'Show', interest_url(interest) %></td>
+      <td><%= link_to 'Edit', edit_interest_url(interest) %></td>
+      <td><%= link_to 'Destroy', interest_url(interest), method: 'delete', data: { confirm: "Do you really want to delete this interest?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

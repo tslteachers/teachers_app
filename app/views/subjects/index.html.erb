@@ -1,0 +1,28 @@
+<h1>Subjects</h1>
+
+<p><%= link_to 'Add a New Subject', new_subject_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @subjects.each do |subject| %>
+    <tr>
+      <td><%= subject.name %></td>
+  
+      <td><%= link_to 'Show', subject_url(subject) %></td>
+      <td><%= link_to 'Edit', edit_subject_url(subject) %></td>
+      <td><%= link_to 'Destroy', subject_url(subject), method: 'delete', data: { confirm: "Do you really want to delete this subject?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

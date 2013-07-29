@@ -1,0 +1,46 @@
+<h1>New Teacher</h1>
+
+
+<%= form_tag(teachers_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :first_name %><br />
+    <%= text_field_tag :first_name %>
+  </div>
+
+  <div>
+    <%= label_tag :last_name %><br />
+    <%= text_field_tag :last_name %>
+  </div>
+
+  <div>
+    <%= label_tag :bio %><br />
+    <%= text_area_tag :bio %>
+  </div>
+
+  <div>
+    <%= label_tag :highest_degree %><br />
+    <%= text_field_tag :highest_degree %>
+  </div>
+
+  <div>
+    <%= label_tag :availability %><br />
+    <%= text_field_tag :availability %>
+  </div>
+
+  <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email %>
+  </div>
+
+  <div>
+    <%= label_tag :phone %><br />
+    <%= text_field_tag :phone %>
+  </div>
+
+
+  <div>
+    <%= submit_tag "Create Teacher" %>
+  </div>
+<% end %>

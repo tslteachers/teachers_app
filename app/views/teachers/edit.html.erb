@@ -1,0 +1,46 @@
+<h1>Editing Teacher #<%= @teacher.id %></h1>
+
+
+<%= form_tag(teacher_url(@teacher), method: 'patch') do %>
+
+  <div>
+    <%= label_tag :first_name %><br />
+    <%= text_field_tag :first_name, @teacher.first_name %>
+  </div>
+
+  <div>
+    <%= label_tag :last_name %><br />
+    <%= text_field_tag :last_name, @teacher.last_name %>
+  </div>
+
+  <div>
+    <%= label_tag :bio %><br />
+    <%= text_area_tag :bio, @teacher.bio %>
+  </div>
+
+  <div>
+    <%= label_tag :highest_degree %><br />
+    <%= text_field_tag :highest_degree, @teacher.highest_degree %>
+  </div>
+
+  <div>
+    <%= label_tag :availability %><br />
+    <%= text_field_tag :availability, @teacher.availability %>
+  </div>
+
+  <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, @teacher.email %>
+  </div>
+
+  <div>
+    <%= label_tag :phone %><br />
+    <%= text_field_tag :phone, @teacher.phone %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Teacher" %>
+  </div>
+
+<% end %>
