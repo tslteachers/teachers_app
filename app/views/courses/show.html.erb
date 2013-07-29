@@ -35,4 +35,22 @@
   <%= @course.description %>
 </p>
 
+<h2>Teachers interested in teaching this course:</h2>
+
+<ul>
+  <% @course.teachers.each do |teacher| %>
+    <li><%= teacher.full_name %></li>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
 
